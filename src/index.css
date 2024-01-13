@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes animate-wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  85% {
+    transform: rotate(5deg);
+  }
+  95% {
+    transform: rotate(-5deg);
+    /* transform: scale(1.12); */
+  }
+  100% {
+    transform: rotate(0deg);
+    /* transform: scale(1); */
+  }
+}
+
+.wiggle {
+  animation: animate-wiggle 2s infinite;
+}
+
+.wiggle:hover {
+  animation: none;
+}
+
+.link {
+  @apply hover:text-green-600 hover:ease-linear hover:transition-all hover:duration-150;
+}
